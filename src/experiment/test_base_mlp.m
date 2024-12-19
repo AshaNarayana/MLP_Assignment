@@ -1,3 +1,5 @@
+
+
 hiddenUnitsList = [50, 200, 500];
 outputFuncs = {'logsig', 'softmax'};
 costFuncs = {'mse', 'crossentropy'};
@@ -6,6 +8,11 @@ numRuns = 3;
 
 % Initialize results
 results = [];
+
+data = load('datasets/caltech101_silhouettes_28.mat');
+X_normalized = data.X / 255;
+Y_onehot = full(ind2vec(data.Y(:)' + 1));
+names = data.classnames;
 
 % Iterate over configurations
 for h = 1:length(hiddenUnitsList)

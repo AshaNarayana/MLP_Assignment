@@ -1,6 +1,10 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Base architecture MLP (function)  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 function meanAccuracy = base_mlp(X, Y, hiddenUnits, outputFunc, costFunc, trainRatio, valRatio, testRatio, numRuns)
-
-
     % Randomly split the dataset
     [trainInd, valInd, testInd] = dividerand(size(X, 1), trainRatio, valRatio, testRatio);
     trainData = X(trainInd, :)';
@@ -33,14 +37,17 @@ function meanAccuracy = base_mlp(X, Y, hiddenUnits, outputFunc, costFunc, trainR
     
         % Train the network
         [net, ~] = train(net, trainData, trainLabels);
+
         % Validate the network
         valPredictions = net(valData);
         [~, valPredictedClasses] = max(valPredictions);
         [~, valActualClasses] = max(valLabels);
         valAccuracy = mean(valPredictedClasses == valActualClasses) * 100;
+
         % TODO Validation accuracy is very poort for this settings, we need to
         % fine tune it.
         fprintf('Validation Accuracy for run %d: %.2f%%\n', run, valAccuracy);
+
         % Test and calculate accuracy
         predictions = net(testData);
         [~, predictedClasses] = max(predictions);
