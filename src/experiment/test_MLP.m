@@ -9,24 +9,19 @@
 
 close all, clear all, clc 
 
-import MLP.*
 
 
 % Data + preprocessing
-data = load('datasets/caltech101_silhouettes_28.mat');
+data = load('caltech101_silhouettes_28.mat');
 X = data.X / 255;
 Y = full(ind2vec(data.Y(:)' + 1));
 names = data.classnames;
-
-% Initialize results
-results = [];
 
 
 % Get current split ratios
 trainRatio = 0.8;
 valRatio = 0.1;
 testRatio = 0.1;
-
 
 % Randomly split the dataset
 [trainInd, valInd, testInd] = dividerand(size(X, 1), trainRatio, valRatio, testRatio);
@@ -39,38 +34,76 @@ testLabels = Y(:, testInd);
 
 
 % MLP
-hiddenUnits = 500;
 hiddenLayer = 'logsig';
-outputLayer = 'logsig';
-costFunction = 'mse';
+outputLayer = 'softmaz';
+costFunction = 'crossentropy';
 
-network = feedforwardnet(hiddenUnits);
-network.layers{1}.transferFcn = hiddenLayer;
-network.layers{2}.transferFcn = outputLayer; 
-network.performFcn = costFunction; 
-
-network.outputs{end}.processFcns = {};
-
-
-% Set training parameters
-network.trainParam.epochs = 100; 
-network.trainFcn = 'traingdm'; % trainlm breaks
-network.trainParam.lr = 0.01;
-network.trainParam.mc = 0.8;
-
-network.trainParam.showWindow = true;  % Show training window
+hiddenUnitsList = [50, 200, 500];
+% https://es.mathworks.com/help/deeplearning/ug/train-and-apply-multilayer-neural-networks.html
+trainingFList = {'traingdx', 'trainrp'};
+momentumsList = [0.5, 0.9];
+lratesList = [0.5, 0.1, 0.01, 0.001];
 
 
-% Train the network
-[network, ~] = train(network, trainData, trainLabels);
+% Initialize results
+results = [];
+
+for h = 1:length(hiddenUnitsList)
+    for tr = 1:length(trainingFList)
+        for lr = 1:length(lratesList)
+            for m = 1:length(momentumsList)
+                
+                accuracies = zeros(1, 5); % Initialize accuracy tracking
+
+                for run = 1:5
+                    network = feedforwardnet(hiddenUnitsList(h));
+                    network.layers{1}.transferFcn = hiddenLayer;
+                    network.layers{2}.transferFcn = outputLayer; 
+                    network.performFcn = costFunction; 
+                    
+                    network.outputs{:}.processFcns = {};
+                    
+                    % Set training parameters
+                    network.trainFcn = trainingFList{tr};
+                    network.trainParam.lr = lratesList(lr); % less than 1.0 and greater than 10^-6
+    
+                    network.trainParam.epochs = 500; 
+                    network.trainParam.mc = momentumsList(m); % Only for 'traingdx'
+                    network.trainParam.showWindow = true;  % Show training window
+                    
+                    
+                    % Train the network
+                    [network, ~] = train(network, trainData, trainLabels);
+                    
+                    
+                    % Validate the network
+                    valPredictions = network(valData);
+                    [~, valPredictedClasses] = max(valPredictions);
+                    [~, valActualClasses] = max(valLabels);
+                    valAccuracy = mean(valPredictedClasses == valActualClasses) * 100;
+                    fprintf('Validation Accuracy: %.2f%%\n', valAccuracy);
+                    
+                    
+                    % Test the network
+                    testPredictions = network(testData);
+                    [~, testPredictedClasses] = max(testPredictions);
+                    [~, testActualClasses] = max(testLabels);
+                    accuracy = mean(testPredictedClasses == testActualClasses) * 100;
+                    fprintf('Test Accuracy: %.2f%%\n', accuracy);
+                    accuracies(run) = accuracy;
+                end
+                
+                % Store the results
+                results = [results; hiddenUnitsList(h),  trainingFList(tr), lratesList(lr), mean(accuracies)];
+    
+                % Display progress
+                fprintf('Hidden Units: %d, Training Function: %s, LR: %s, M:%s, Mean Accuracy: %.2f%%\n\n', ...
+                        hiddenUnitsList(h), trainingFList{tr}, lratesList(lr), momentumsList(m), mean(accuracies));
+            end
+        end
+    end
+end
 
 
-% Validate the network
-valPredictions = network(valData);
-[~, valPredictedClasses] = max(valPredictions);
-[~, valActualClasses] = max(valLabels);
-valAccuracy = mean(valPredictedClasses == valActualClasses) * 100;
 
-valError = gsubtract(valLabels, valPredictions); 
-fprintf('Validation Error: %.2f%%\n', valError);
-fprintf('Validation Accuracy: %.2f%%\n', valAccuracy);
+writecell(results, 'results/report_finetuning_configuration_2.csv')
