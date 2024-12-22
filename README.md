@@ -17,13 +17,13 @@ The code has been divided in different folders:
 
     .
     ├── datasets                       % Directory containing the provided datset
-    ├── preprocessing                  % Small piece of code for testing preprocessing
-    ├── results                        % Results from the experiments
+    ├── preprocessing                  % Small piece of code to test the preprocessing
+    ├── results                        % Contains the results from the experiments
     └── src
-        ├── classifiers                 % Base structure for the MLP
-        └── experiments                 % All the experiment files
+        ├── classifiers                 % Base structure for the MLPs
+        ├── experiments                 % The experiment files
+        └── plots                       % Small piece of code to plot results
+        
+## Experiments and Results
 
-
-## Experiments
-
-All the experiment files output their corresponding results in a .csv file; these files are named as reports. The history result files contain the messages sent in MATLAB's command window when that experiment was running.
+All the experiment files output their corresponding results in a .csv file; these files are named as reports. Moreover, the history result files contain the messages sent in MATLAB's command window when that experiment was running. We have also added some plots for the fine-tuning process for each configuration.
