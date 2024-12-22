@@ -73,10 +73,12 @@ for h = 1:length(hiddenUnitsList)
         % Compute mean accuracy
         mean_accuracies = mean(accuracies);
         mean_mses = mean(mses);
-        fprintf('\nMean MSE: %.2fn', mean_mses);
+        fprintf('\nMean MSE: %.2f', mean_mses);
         fprintf('\nMean Accuracy: %.2f%%\n\n', mean_accuracies);
 
         % Store the results
-        results = [results; hiddenUnitsList(h), s, mean_mses, mean_accuracies];
+        results = [results; hiddenUnitsList(h), trainRatio, valRatio, testRatio, mean_mses, mean_accuracies];
     end
 end
+
+writematrix(results, 'results/report_experiment_configuration_2.csv')

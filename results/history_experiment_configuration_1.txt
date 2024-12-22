@@ -1,0 +1,260 @@
+Run 1, Hidden Units: 50, Split: [0.8/0.1/0.1]
+Validation MSE: 1494.03 
+Validation Accuracy: 31.14%
+MSE: 1419.40 
+Test Accuracy: 33.33%
+Run 2, Hidden Units: 50, Split: [0.8/0.1/0.1]
+Validation MSE: 1126.04 
+Validation Accuracy: 34.72%
+MSE: 1145.03 
+Test Accuracy: 30.68%
+Run 3, Hidden Units: 50, Split: [0.8/0.1/0.1]
+Validation MSE: 1473.37 
+Validation Accuracy: 29.30%
+MSE: 1279.56 
+Test Accuracy: 29.30%
+Run 4, Hidden Units: 50, Split: [0.8/0.1/0.1]
+Validation MSE: 1473.07 
+Validation Accuracy: 27.91%
+MSE: 1504.37 
+Test Accuracy: 26.87%
+Run 5, Hidden Units: 50, Split: [0.8/0.1/0.1]
+Validation MSE: 1204.71 
+Validation Accuracy: 30.80%
+MSE: 1254.88 
+Test Accuracy: 31.60%
+
+Mean MSE: 1320.65
+Mean Accuracy: 30.36%
+
+Run 1, Hidden Units: 50, Split: [0.4/0.2/0.4]
+Validation MSE: 1929.67 
+Validation Accuracy: 26.59%
+MSE: 1902.64 
+Test Accuracy: 26.73%
+Run 2, Hidden Units: 50, Split: [0.4/0.2/0.4]
+Validation MSE: 1725.35 
+Validation Accuracy: 28.20%
+MSE: 1691.06 
+Test Accuracy: 27.48%
+Run 3, Hidden Units: 50, Split: [0.4/0.2/0.4]
+Validation MSE: 1303.96 
+Validation Accuracy: 28.84%
+MSE: 1395.02 
+Test Accuracy: 27.02%
+Run 4, Hidden Units: 50, Split: [0.4/0.2/0.4]
+Validation MSE: 1337.78 
+Validation Accuracy: 29.47%
+MSE: 1313.15 
+Test Accuracy: 28.95%
+Run 5, Hidden Units: 50, Split: [0.4/0.2/0.4]
+Validation MSE: 1430.72 
+Validation Accuracy: 24.97%
+MSE: 1430.51 
+Test Accuracy: 24.19%
+
+Mean MSE: 1546.48
+Mean Accuracy: 26.87%
+
+Run 1, Hidden Units: 50, Split: [0.1/0.1/0.8]
+Validation MSE: 2553.33 
+Validation Accuracy: 15.34%
+MSE: 2369.09 
+Test Accuracy: 18.62%
+Run 2, Hidden Units: 50, Split: [0.1/0.1/0.8]
+Validation MSE: 4105.26 
+Validation Accuracy: 1.38%
+MSE: 4244.68 
+Test Accuracy: 0.81%
+Run 3, Hidden Units: 50, Split: [0.1/0.1/0.8]
+Validation MSE: 1492.53 
+Validation Accuracy: 29.18%
+MSE: 1294.37 
+Test Accuracy: 30.65%
+Run 4, Hidden Units: 50, Split: [0.1/0.1/0.8]
+Validation MSE: 1135.77 
+Validation Accuracy: 33.68%
+MSE: 1186.06 
+Test Accuracy: 33.31%
+Run 5, Hidden Units: 50, Split: [0.1/0.1/0.8]
+Validation MSE: 1763.57 
+Validation Accuracy: 28.03%
+MSE: 1791.70 
+Test Accuracy: 28.59%
+
+Mean MSE: 2177.18
+Mean Accuracy: 22.40%
+
+Run 1, Hidden Units: 200, Split: [0.8/0.1/0.1]
+Validation MSE: 1132.03 
+Validation Accuracy: 35.99%
+MSE: 1213.91 
+Test Accuracy: 37.02%
+Run 2, Hidden Units: 200, Split: [0.8/0.1/0.1]
+Validation MSE: 1340.93 
+Validation Accuracy: 34.60%
+MSE: 1366.87 
+Test Accuracy: 32.99%
+Run 3, Hidden Units: 200, Split: [0.8/0.1/0.1]
+Validation MSE: 1124.25 
+Validation Accuracy: 41.64%
+MSE: 1039.40 
+Test Accuracy: 37.37%
+Run 4, Hidden Units: 200, Split: [0.8/0.1/0.1]
+Validation MSE: 1047.27 
+Validation Accuracy: 44.06%
+MSE: 1032.69 
+Test Accuracy: 45.56%
+Run 5, Hidden Units: 200, Split: [0.8/0.1/0.1]
+Validation MSE: 1792.34 
+Validation Accuracy: 24.68%
+MSE: 1912.51 
+Test Accuracy: 23.18%
+
+Mean MSE: 1313.07
+Mean Accuracy: 35.22%
+
+Run 1, Hidden Units: 200, Split: [0.4/0.2/0.4]
+Validation MSE: 1148.98 
+Validation Accuracy: 41.35%
+MSE: 1112.10 
+Test Accuracy: 41.29%
+Run 2, Hidden Units: 200, Split: [0.4/0.2/0.4]
+Validation MSE: 1108.58 
+Validation Accuracy: 38.29%
+MSE: 1086.40 
+Test Accuracy: 39.36%
+Run 3, Hidden Units: 200, Split: [0.4/0.2/0.4]
+Validation MSE: 1007.53 
+Validation Accuracy: 40.25%
+MSE: 923.90 
+Test Accuracy: 41.21%
+Run 4, Hidden Units: 200, Split: [0.4/0.2/0.4]
+Validation MSE: 1377.88 
+Validation Accuracy: 29.35%
+MSE: 1265.69 
+Test Accuracy: 30.16%
+Run 5, Hidden Units: 200, Split: [0.4/0.2/0.4]
+Validation MSE: 1136.67 
+Validation Accuracy: 35.76%
+MSE: 1161.38 
+Test Accuracy: 34.66%
+
+Mean MSE: 1109.90
+Mean Accuracy: 37.34%
+
+Run 1, Hidden Units: 200, Split: [0.1/0.1/0.8]
+Validation MSE: 1102.02 
+Validation Accuracy: 32.99%
+MSE: 1151.14 
+Test Accuracy: 34.05%
+Run 2, Hidden Units: 200, Split: [0.1/0.1/0.8]
+Validation MSE: 1048.51 
+Validation Accuracy: 34.72%
+MSE: 1192.25 
+Test Accuracy: 34.38%
+Run 3, Hidden Units: 200, Split: [0.1/0.1/0.8]
+Validation MSE: 944.92 
+Validation Accuracy: 34.83%
+MSE: 999.51 
+Test Accuracy: 34.21%
+Run 4, Hidden Units: 200, Split: [0.1/0.1/0.8]
+Validation MSE: 1139.83 
+Validation Accuracy: 35.18%
+MSE: 1092.54 
+Test Accuracy: 34.41%
+Run 5, Hidden Units: 200, Split: [0.1/0.1/0.8]
+Validation MSE: 1342.20 
+Validation Accuracy: 31.14%
+MSE: 1348.09 
+Test Accuracy: 32.39%
+
+Mean MSE: 1156.70
+Mean Accuracy: 33.89%
+
+Run 1, Hidden Units: 500, Split: [0.8/0.1/0.1]
+Validation MSE: 1011.51 
+Validation Accuracy: 39.10%
+MSE: 1007.21 
+Test Accuracy: 40.48%
+Run 2, Hidden Units: 500, Split: [0.8/0.1/0.1]
+Validation MSE: 1405.97 
+Validation Accuracy: 30.80%
+MSE: 1350.01 
+Test Accuracy: 35.06%
+Run 3, Hidden Units: 500, Split: [0.8/0.1/0.1]
+Validation MSE: 1185.62 
+Validation Accuracy: 32.30%
+MSE: 1196.80 
+Test Accuracy: 33.91%
+Run 4, Hidden Units: 500, Split: [0.8/0.1/0.1]
+Validation MSE: 973.74 
+Validation Accuracy: 39.10%
+MSE: 1125.87 
+Test Accuracy: 39.56%
+Run 5, Hidden Units: 500, Split: [0.8/0.1/0.1]
+Validation MSE: 1235.91 
+Validation Accuracy: 33.68%
+MSE: 1090.22 
+Test Accuracy: 34.83%
+
+Mean MSE: 1154.02
+Mean Accuracy: 36.77%
+
+Run 1, Hidden Units: 500, Split: [0.4/0.2/0.4]
+Validation MSE: 1146.84 
+Validation Accuracy: 39.45%
+MSE: 1008.68 
+Test Accuracy: 39.45%
+Run 2, Hidden Units: 500, Split: [0.4/0.2/0.4]
+Validation MSE: 1502.14 
+Validation Accuracy: 30.05%
+MSE: 1410.32 
+Test Accuracy: 30.45%
+Run 3, Hidden Units: 500, Split: [0.4/0.2/0.4]
+Validation MSE: 1542.52 
+Validation Accuracy: 33.62%
+MSE: 1544.88 
+Test Accuracy: 32.30%
+Run 4, Hidden Units: 500, Split: [0.4/0.2/0.4]
+Validation MSE: 1238.89 
+Validation Accuracy: 34.83%
+MSE: 1243.09 
+Test Accuracy: 33.97%
+Run 5, Hidden Units: 500, Split: [0.4/0.2/0.4]
+Validation MSE: 1246.91 
+Validation Accuracy: 33.74%
+MSE: 1177.18 
+Test Accuracy: 34.43%
+
+Mean MSE: 1276.83
+Mean Accuracy: 34.12%
+
+Run 1, Hidden Units: 500, Split: [0.1/0.1/0.8]
+Validation MSE: 1443.20 
+Validation Accuracy: 29.07%
+MSE: 1429.05 
+Test Accuracy: 31.12%
+Run 2, Hidden Units: 500, Split: [0.1/0.1/0.8]
+Validation MSE: 1108.30 
+Validation Accuracy: 34.72%
+MSE: 1141.60 
+Test Accuracy: 32.36%
+Run 3, Hidden Units: 500, Split: [0.1/0.1/0.8]
+Validation MSE: 1146.66 
+Validation Accuracy: 33.33%
+MSE: 1270.64 
+Test Accuracy: 32.20%
+Run 4, Hidden Units: 500, Split: [0.1/0.1/0.8]
+Validation MSE: 1300.53 
+Validation Accuracy: 26.30%
+MSE: 1358.24 
+Test Accuracy: 26.34%
+Run 5, Hidden Units: 500, Split: [0.1/0.1/0.8]
+Validation MSE: 1199.87 
+Validation Accuracy: 36.22%
+MSE: 1270.80 
+Test Accuracy: 33.93%
+
+Mean MSE: 1294.07
+Mean Accuracy: 31.19%
