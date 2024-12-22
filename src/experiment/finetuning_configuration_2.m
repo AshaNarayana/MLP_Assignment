@@ -38,7 +38,6 @@ costFunction = 'crossentropy';
 
 hiddenUnitsList = [50, 200, 500];
 
-% https://es.mathworks.com/help/deeplearning/ug/train-and-apply-multilayer-neural-networks.html
 trainingFList = {'traincgb', 'trainscg'};
 lratesList = [0.5, 0.1, 0.01, 0.001];
 
