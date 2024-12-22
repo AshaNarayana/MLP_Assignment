@@ -26,4 +26,4 @@ The code has been divided in different folders:
 
 ## Experiments
 
-All the experiment files output their corresponding results in a .csv file; these files are named as reports of that particular file. The history result files contain the in MATLAB'a command window.
+All the experiment files output their corresponding results in a .csv file; these files are named as reports. The history result files contain the messages sent in MATLAB's command window when that experiment was running.
