@@ -1,0 +1,287 @@
+Validation Accuracy: 51.79%
+Test Accuracy: 53.40%
+Validation Accuracy: 54.09%
+Test Accuracy: 53.98%
+Validation Accuracy: 52.48%
+Test Accuracy: 51.67%
+Validation Accuracy: 51.56%
+Test Accuracy: 51.90%
+Validation Accuracy: 48.33%
+Test Accuracy: 50.75%
+Hidden Units: 50, Training Function: traincgb, LR: 5.000000e-01, Mean Accuracy: 52.34%
+
+Validation Accuracy: 53.63%
+Test Accuracy: 54.44%
+Validation Accuracy: 54.90%
+Test Accuracy: 52.83%
+Validation Accuracy: 50.63%
+Test Accuracy: 52.83%
+Validation Accuracy: 45.33%
+Test Accuracy: 48.79%
+Validation Accuracy: 48.44%
+Test Accuracy: 51.67%
+Hidden Units: 50, Training Function: traincgb, LR: 1.000000e-01, Mean Accuracy: 52.11%
+
+Validation Accuracy: 53.40%
+Test Accuracy: 51.33%
+Validation Accuracy: 50.87%
+Test Accuracy: 49.83%
+Validation Accuracy: 50.52%
+Test Accuracy: 51.44%
+Validation Accuracy: 52.71%
+Test Accuracy: 51.79%
+Validation Accuracy: 52.60%
+Test Accuracy: 53.63%
+Hidden Units: 50, Training Function: traincgb, LR: 1.000000e-02, Mean Accuracy: 51.60%
+
+Validation Accuracy: 53.86%
+Test Accuracy: 53.52%
+Validation Accuracy: 51.67%
+Test Accuracy: 53.06%
+Validation Accuracy: 51.44%
+Test Accuracy: 51.33%
+Validation Accuracy: 54.90%
+Test Accuracy: 53.63%
+Validation Accuracy: 54.33%
+Test Accuracy: 52.13%
+Hidden Units: 50, Training Function: traincgb, LR: 1.000000e-03, Mean Accuracy: 52.73%
+
+Validation Accuracy: 56.40%
+Test Accuracy: 55.71%
+Validation Accuracy: 55.36%
+Test Accuracy: 54.67%
+Validation Accuracy: 54.44%
+Test Accuracy: 55.25%
+Validation Accuracy: 54.44%
+Test Accuracy: 53.75%
+Validation Accuracy: 54.09%
+Test Accuracy: 56.40%
+Hidden Units: 50, Training Function: trainscg, LR: 5.000000e-01, Mean Accuracy: 55.16%
+
+Validation Accuracy: 54.56%
+Test Accuracy: 52.94%
+Validation Accuracy: 57.90%
+Test Accuracy: 56.98%
+Validation Accuracy: 56.06%
+Test Accuracy: 54.21%
+Validation Accuracy: 55.48%
+Test Accuracy: 54.21%
+Validation Accuracy: 55.82%
+Test Accuracy: 56.86%
+Hidden Units: 50, Training Function: trainscg, LR: 1.000000e-01, Mean Accuracy: 55.04%
+
+Validation Accuracy: 55.48%
+Test Accuracy: 53.86%
+Validation Accuracy: 56.06%
+Test Accuracy: 57.21%
+Validation Accuracy: 54.44%
+Test Accuracy: 54.44%
+Validation Accuracy: 55.59%
+Test Accuracy: 54.90%
+Validation Accuracy: 55.71%
+Test Accuracy: 56.17%
+Hidden Units: 50, Training Function: trainscg, LR: 1.000000e-02, Mean Accuracy: 55.32%
+
+Validation Accuracy: 55.82%
+Test Accuracy: 55.71%
+Validation Accuracy: 53.29%
+Test Accuracy: 53.86%
+Validation Accuracy: 55.59%
+Test Accuracy: 55.13%
+Validation Accuracy: 54.67%
+Test Accuracy: 55.25%
+Validation Accuracy: 54.33%
+Test Accuracy: 55.25%
+Hidden Units: 50, Training Function: trainscg, LR: 1.000000e-03, Mean Accuracy: 55.04%
+
+Validation Accuracy: 56.98%
+Test Accuracy: 59.40%
+Validation Accuracy: 57.90%
+Test Accuracy: 59.05%
+Validation Accuracy: 57.44%
+Test Accuracy: 57.32%
+Validation Accuracy: 55.71%
+Test Accuracy: 56.29%
+Validation Accuracy: 58.71%
+Test Accuracy: 59.98%
+Hidden Units: 200, Training Function: traincgb, LR: 5.000000e-01, Mean Accuracy: 58.41%
+
+Validation Accuracy: 60.21%
+Test Accuracy: 57.09%
+Validation Accuracy: 58.82%
+Test Accuracy: 58.25%
+Validation Accuracy: 58.25%
+Test Accuracy: 57.55%
+Validation Accuracy: 57.79%
+Test Accuracy: 58.59%
+Validation Accuracy: 55.48%
+Test Accuracy: 56.86%
+Hidden Units: 200, Training Function: traincgb, LR: 1.000000e-01, Mean Accuracy: 57.67%
+
+Validation Accuracy: 57.79%
+Test Accuracy: 58.13%
+Validation Accuracy: 58.25%
+Test Accuracy: 58.48%
+Validation Accuracy: 57.21%
+Test Accuracy: 57.79%
+Validation Accuracy: 59.28%
+Test Accuracy: 60.32%
+Validation Accuracy: 57.67%
+Test Accuracy: 57.67%
+Hidden Units: 200, Training Function: traincgb, LR: 1.000000e-02, Mean Accuracy: 58.48%
+
+Validation Accuracy: 57.90%
+Test Accuracy: 56.98%
+Validation Accuracy: 55.36%
+Test Accuracy: 58.36%
+Validation Accuracy: 58.48%
+Test Accuracy: 58.36%
+Validation Accuracy: 54.67%
+Test Accuracy: 54.79%
+Validation Accuracy: 58.25%
+Test Accuracy: 57.09%
+Hidden Units: 200, Training Function: traincgb, LR: 1.000000e-03, Mean Accuracy: 57.12%
+
+Validation Accuracy: 58.48%
+Test Accuracy: 59.05%
+Validation Accuracy: 57.67%
+Test Accuracy: 55.02%
+Validation Accuracy: 58.02%
+Test Accuracy: 59.40%
+Validation Accuracy: 57.90%
+Test Accuracy: 59.17%
+Validation Accuracy: 58.36%
+Test Accuracy: 58.02%
+Hidden Units: 200, Training Function: trainscg, LR: 5.000000e-01, Mean Accuracy: 58.13%
+
+Validation Accuracy: 58.59%
+Test Accuracy: 57.32%
+Validation Accuracy: 58.94%
+Test Accuracy: 58.36%
+Validation Accuracy: 57.79%
+Test Accuracy: 59.52%
+Validation Accuracy: 56.98%
+Test Accuracy: 57.67%
+Validation Accuracy: 57.32%
+Test Accuracy: 57.09%
+Hidden Units: 200, Training Function: trainscg, LR: 1.000000e-01, Mean Accuracy: 57.99%
+
+Validation Accuracy: 56.52%
+Test Accuracy: 54.44%
+Validation Accuracy: 55.94%
+Test Accuracy: 55.36%
+Validation Accuracy: 57.67%
+Test Accuracy: 57.09%
+Validation Accuracy: 58.36%
+Test Accuracy: 57.44%
+Validation Accuracy: 56.40%
+Test Accuracy: 56.40%
+Hidden Units: 200, Training Function: trainscg, LR: 1.000000e-02, Mean Accuracy: 56.15%
+
+Validation Accuracy: 58.71%
+Test Accuracy: 56.63%
+Validation Accuracy: 58.25%
+Test Accuracy: 57.55%
+Validation Accuracy: 57.32%
+Test Accuracy: 55.94%
+Validation Accuracy: 57.79%
+Test Accuracy: 57.79%
+Validation Accuracy: 58.71%
+Test Accuracy: 57.32%
+Hidden Units: 200, Training Function: trainscg, LR: 1.000000e-03, Mean Accuracy: 57.05%
+
+Validation Accuracy: 58.82%
+Test Accuracy: 58.82%
+Validation Accuracy: 56.06%
+Test Accuracy: 55.25%
+Validation Accuracy: 56.75%
+Test Accuracy: 58.02%
+Validation Accuracy: 55.71%
+Test Accuracy: 56.29%
+Validation Accuracy: 57.55%
+Test Accuracy: 58.02%
+Hidden Units: 500, Training Function: traincgb, LR: 5.000000e-01, Mean Accuracy: 57.28%
+
+Validation Accuracy: 56.52%
+Test Accuracy: 56.40%
+Validation Accuracy: 58.02%
+Test Accuracy: 56.52%
+Validation Accuracy: 59.05%
+Test Accuracy: 58.25%
+Validation Accuracy: 57.44%
+Test Accuracy: 58.82%
+Validation Accuracy: 56.63%
+Test Accuracy: 59.40%
+Hidden Units: 500, Training Function: traincgb, LR: 1.000000e-01, Mean Accuracy: 57.88%
+
+Validation Accuracy: 55.02%
+Test Accuracy: 55.71%
+Validation Accuracy: 56.17%
+Test Accuracy: 56.52%
+Validation Accuracy: 56.98%
+Test Accuracy: 56.86%
+Validation Accuracy: 54.90%
+Test Accuracy: 55.71%
+Validation Accuracy: 58.82%
+Test Accuracy: 60.32%
+Hidden Units: 500, Training Function: traincgb, LR: 1.000000e-02, Mean Accuracy: 57.02%
+
+Validation Accuracy: 58.82%
+Test Accuracy: 58.13%
+Validation Accuracy: 61.13%
+Test Accuracy: 58.48%
+Validation Accuracy: 56.52%
+Test Accuracy: 56.86%
+Validation Accuracy: 58.48%
+Test Accuracy: 56.75%
+Validation Accuracy: 56.29%
+Test Accuracy: 56.75%
+Hidden Units: 500, Training Function: traincgb, LR: 1.000000e-03, Mean Accuracy: 57.39%
+
+Validation Accuracy: 57.79%
+Test Accuracy: 54.79%
+Validation Accuracy: 58.02%
+Test Accuracy: 57.79%
+Validation Accuracy: 55.82%
+Test Accuracy: 56.63%
+Validation Accuracy: 56.52%
+Test Accuracy: 56.75%
+Validation Accuracy: 56.86%
+Test Accuracy: 58.59%
+Hidden Units: 500, Training Function: trainscg, LR: 5.000000e-01, Mean Accuracy: 56.91%
+
+Validation Accuracy: 56.17%
+Test Accuracy: 57.67%
+Validation Accuracy: 56.86%
+Test Accuracy: 54.67%
+Validation Accuracy: 54.33%
+Test Accuracy: 52.02%
+Validation Accuracy: 55.82%
+Test Accuracy: 55.25%
+Validation Accuracy: 52.60%
+Test Accuracy: 56.86%
+Hidden Units: 500, Training Function: trainscg, LR: 1.000000e-01, Mean Accuracy: 55.29%
+
+Validation Accuracy: 57.44%
+Test Accuracy: 55.13%
+Validation Accuracy: 56.86%
+Test Accuracy: 58.13%
+Validation Accuracy: 57.44%
+Test Accuracy: 58.13%
+Validation Accuracy: 58.25%
+Test Accuracy: 57.44%
+Validation Accuracy: 55.13%
+Test Accuracy: 55.13%
+Hidden Units: 500, Training Function: trainscg, LR: 1.000000e-02, Mean Accuracy: 56.79%
+
+Validation Accuracy: 56.06%
+Test Accuracy: 56.52%
+Validation Accuracy: 57.21%
+Test Accuracy: 57.44%
+Validation Accuracy: 54.90%
+Test Accuracy: 55.02%
+Validation Accuracy: 56.17%
+Test Accuracy: 55.71%
+Validation Accuracy: 54.79%
+Test Accuracy: 54.44%
+Hidden Units: 500, Training Function: trainscg, LR: 1.000000e-03, Mean Accuracy: 55.82%

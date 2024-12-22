@@ -1,8 +1,7 @@
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Base architecture for all MLP   %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Base architecture for all MLPs   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 classdef MLP
     properties
@@ -12,6 +11,10 @@ classdef MLP
         costFunction
 
         network
+        valAccuracy
+        valMmserror
+        accuracy
+        mserror
     end
     methods
         function self = MLP(hiddenUnits, hiddenLayer, outputLayer, costFunction)
@@ -20,7 +23,6 @@ classdef MLP
             self.outputLayer = outputLayer;
             self.costFunction = costFunction;
 
-            %self.network = patternnet(hiddenUnits);
             self.network = feedforwardnet(hiddenUnits);
             self.network.layers{1}.transferFcn = hiddenLayer;
             self.network.layers{2}.transferFcn = outputLayer; 
@@ -31,12 +33,8 @@ classdef MLP
 
         function self = train(self, trainData, trainLabels, valData, valLabels)
 
-            % Set training parameters
-            self.network.trainParam.epochs = 1000; 
-            self.network.trainFcn = 'traingdm';
-            self.network.trainParam.lr = 0.01;
-            self.network.trainParam.mc = 0.8;
-
+            % Default parameters for MLP
+            self.network.trainParam.epochs = 500; 
             self.network.trainParam.showWindow = true;  % Show training window
 
             % Train the network
@@ -46,20 +44,22 @@ classdef MLP
             valPredictions = self.network(valData);
             [~, valPredictedClasses] = max(valPredictions);
             [~, valActualClasses] = max(valLabels);
-            valAccuracy = mean(valPredictedClasses == valActualClasses) * 100;
 
-            valError = gsubtract(valLabels, valPredictions); 
-            fprintf('Validation Error: %.2f%%\n', valError);
-            fprintf('Validation Accuracy: %.2f%%\n', valAccuracy);
+            self.valAccuracy = mean(valPredictedClasses == valActualClasses) * 100;
+            self.valMmserror = mse(valPredictedClasses, valActualClasses);
+            fprintf('Validation MSE: %.2f \n', self.valMmserror);
+            fprintf('Validation Accuracy: %.2f%%\n', self.valAccuracy);
         end
 
-        function accuracy = test(self, testData, testLabels)
+        function self = test(self, testData, testLabels)
             predictions = self.network(testData);
             [~, predictedClasses] = max(predictions);
             [~, actualClasses] = max(testLabels);
 
-            accuracy = mean(predictedClasses == actualClasses) * 100;
-            fprintf('Test Accuracy: %.2f%%\n', accuracy);
+            self.accuracy = mean(predictedClasses == actualClasses) * 100;
+            self.mserror = mse(predictedClasses, actualClasses);
+            fprintf('MSE: %.2f \n', self.mserror);
+            fprintf('Test Accuracy: %.2f%%\n',self.accuracy);
         end
     end
 end

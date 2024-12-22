@@ -1,9 +1,9 @@
-
+no
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Experiments for  Configuration 2    %
+% Experiments for  Configuration 1    %
 %   - logsig for the hidden layer     %
-%   - softmax for the output layer    %
-%   - crossentropy                    %
+%   - logsig for the output layer     %
+%   - mean squared error              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -33,7 +33,6 @@ for h = 1:length(hiddenUnitsList)
 
         % Initialize accuracy tracking
         accuracies = zeros(1, numRuns);
-        mses = zeros(1, numRuns);
 
         for run = 1:numRuns
     
@@ -56,27 +55,17 @@ for h = 1:length(hiddenUnitsList)
             testLabels = Y(:, testInd);
     
             % MLP
-            mlp = MLP(hiddenUnitsList(h),'logsig', 'softmax', 'crossentropy');
-
-            % Set training parameters: Only for Configuration 2
-            mlp.network.trainFcn = 'trainscg';
-            mlp.network.trainParam.lr = 0.5;
-
-            % Training and Testing
+            mlp = MLP(hiddenUnitsList(h),'logsig', 'logsig', 'mse');
+    
             mlp = mlp.train(trainData, trainLabels, valData, valLabels);
-            mlp = mlp.test(testData, testLabels);
-
-            accuracies(run)  = mlp.accuracy;
-            mses(run) = mlp.mserror;
+            accuracies = mlp.test(testData, testLabels);
         end
 
         % Compute mean accuracy
         mean_accuracies = mean(accuracies);
-        mean_mses = mean(mses);
-        fprintf('\nMean MSE: %.2fn', mean_mses);
         fprintf('\nMean Accuracy: %.2f%%\n\n', mean_accuracies);
 
         % Store the results
-        results = [results; hiddenUnitsList(h), s, mean_mses, mean_accuracies];
+        results = [results; hiddenUnitsList(h), s, mean_accuracies];
     end
 end

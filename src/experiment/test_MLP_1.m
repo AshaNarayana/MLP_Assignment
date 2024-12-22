@@ -1,9 +1,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Experiments for  Configuration 1  %
-%   - logsig for the hidden layer     %
-%   - logsig for the output layer     %
-%   - mean squared error              %
+%      Testing MLP parameters (1)     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -23,6 +20,7 @@ trainRatio = 0.8;
 valRatio = 0.1;
 testRatio = 0.1;
 
+
 % Randomly split the dataset
 [trainInd, valInd, testInd] = dividerand(size(X, 1), trainRatio, valRatio, testRatio);
 trainData = X(trainInd, :)';
@@ -35,14 +33,15 @@ testLabels = Y(:, testInd);
 
 % MLP
 hiddenLayer = 'logsig';
-outputLayer = 'softmaz';
-costFunction = 'crossentropy';
+outputLayer = 'logsig';
+costFunction = 'mse';
 
 hiddenUnitsList = [50, 200, 500];
+
 % https://es.mathworks.com/help/deeplearning/ug/train-and-apply-multilayer-neural-networks.html
 trainingFList = {'traingdx', 'trainrp'};
-momentumsList = [0.5, 0.9];
 lratesList = [0.5, 0.1, 0.01, 0.001];
+momentumsList = [0.5, 0.9];
 
 
 % Initialize results
@@ -104,6 +103,4 @@ for h = 1:length(hiddenUnitsList)
     end
 end
 
-
-
-writecell(results, 'results/report_finetuning_configuration_2.csv')
+writecell(results, 'results/report_finetuning_configuration_1.csv')

@@ -1,6 +1,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Experiments for  Configuration 1  %
+% Experiments for  Configuration 1    %
 %   - logsig for the hidden layer     %
 %   - logsig for the output layer     %
 %   - mean squared error              %
@@ -13,15 +13,18 @@ import MLP.*
 
 
 % Parameters to test
+numRuns = 5;
+
 hiddenUnitsList = [50, 200, 500];
 splits = [0.8, 0.1, 0.1; 0.4, 0.2, 0.4; 0.1, 0.1, 0.8];
-numRuns = 3;
+
 
 % Data
 data = load('datasets/caltech101_silhouettes_28.mat');
 X = data.X / 255;
 Y = full(ind2vec(data.Y(:)' + 1));
 names = data.classnames;
+
 
 % Initialize results
 results = [];
@@ -33,6 +36,7 @@ for h = 1:length(hiddenUnitsList)
 
         % Initialize accuracy tracking
         accuracies = zeros(1, numRuns);
+        mses = zeros(1, numRuns);
 
         for run = 1:numRuns
     
@@ -56,16 +60,29 @@ for h = 1:length(hiddenUnitsList)
     
             % MLP
             mlp = MLP(hiddenUnitsList(h),'logsig', 'logsig', 'mse');
-    
+
+            % Set training parameters: Only for Configuration 1
+            mlp.network.trainFcn = 'traingdx';
+            mlp.network.trainParam.lr = 0.1;
+            mlp.network.trainParam.mc = 0.9;
+
+            % Training and Testing
             mlp = mlp.train(trainData, trainLabels, valData, valLabels);
-            accuracies = mlp.test(testData, testLabels);
+            mlp = mlp.test(testData, testLabels);
+
+            accuracies(run)  = mlp.accuracy;
+            mses(run) = mlp.mserror;
         end
 
         % Compute mean accuracy
         mean_accuracies = mean(accuracies);
+        mean_mses = mean(mses);
+        fprintf('\nMean MSE: %.2fn', mean_mses);
         fprintf('\nMean Accuracy: %.2f%%\n\n', mean_accuracies);
 
         % Store the results
-        results = [results; hiddenUnitsList(h), s, mean_accuracies];
+        results = [results; hiddenUnitsList(h), s, mean_mses, mean_accuracies];
     end
 end
+
+writecell(results, 'results/report_finetuning_configuration_1.csv')
